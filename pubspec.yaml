@@ -7,8 +7,25 @@ environment:
   sdk: ^3.7.0
 
 dependencies:
+  component_library:
+    path: packages/component_library
+  domain_models:
+    path: packages/domain_models
+  fav_qs_api:
+    path: packages/fav_qs_api
   flutter:
     sdk: flutter
+  key_value_storage:
+    path: packages/key_value_storage
+  monitoring:
+    path: packages/monitoring
+  quote_repository:
+    path: packages/quote_repository
+  routemaster: ^1.0.1
+  sign_up:
+    path: packages/features/sign_up
+  user_repository:
+    path: packages/user_repository
 
 dev_dependencies:
   flutter_test:
