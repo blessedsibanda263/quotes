@@ -1,7 +1,12 @@
-import 'package:component_library/src/l10n/component_library_localizations.dart';
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'component_library_localizations.dart';
 
+// ignore_for_file: type=lint
+
+/// The translations for Portuguese (`pt`).
 class ComponentLibraryLocalizationsPt extends ComponentLibraryLocalizations {
-  ComponentLibraryLocalizationsPt([super.locale = 'pt']);
+  ComponentLibraryLocalizationsPt([String locale = 'pt']) : super(locale);
 
   @override
   String get downvoteIconButtonTooltip => 'Negativo';
@@ -28,14 +33,11 @@ class ComponentLibraryLocalizationsPt extends ComponentLibraryLocalizations {
   String get exceptionIndicatorTryAgainButton => 'Tentar Novamente';
 
   @override
-  String get exceptionIndicatorGenericMessage =>
-      'Ocorreu um erro.\nPor favor, confira sua conexão com a internet e tente novamente mais tarde.';
+  String get exceptionIndicatorGenericMessage => 'Ocorreu um erro.\nPor favor, confira sua conexão com a internet e tente novamente mais tarde.';
 
   @override
-  String get genericErrorSnackbarMessage =>
-      'Ocorreu um erro. Por favor, confira sua conexão com a internet.';
+  String get genericErrorSnackbarMessage => 'Ocorreu um erro. Por favor, confira sua conexão com a internet.';
 
   @override
-  String get authenticationRequiredErrorSnackbarMessage =>
-      'Você precisa estar logado para executar essa ação.';
+  String get authenticationRequiredErrorSnackbarMessage => 'Você precisa estar logado para executar essa ação.';
 }

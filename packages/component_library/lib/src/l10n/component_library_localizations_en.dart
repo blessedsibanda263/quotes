@@ -1,31 +1,18 @@
-import 'package:component_library/src/l10n/component_library_localizations.dart';
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'component_library_localizations.dart';
 
+// ignore_for_file: type=lint
+
+/// The translations for English (`en`).
 class ComponentLibraryLocalizationsEn extends ComponentLibraryLocalizations {
-  ComponentLibraryLocalizationsEn([super.locale = 'en']);
-
-  @override
-  String get authenticationRequiredErrorSnackbarMessage =>
-      'You need to sign in before performing this action.';
+  ComponentLibraryLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
   String get downvoteIconButtonTooltip => 'Downvote';
 
   @override
-  String get exceptionIndicatorGenericMessage =>
-      'There has been an error.\nPlease, check your internet connection and try again later.';
-
-  @override
-  String get exceptionIndicatorGenericTitle => 'Something went wrong';
-
-  @override
-  String get exceptionIndicatorTryAgainButton => 'Try again';
-
-  @override
-  String get favoriteIconButtonTooltip => 'Favorite';
-
-  @override
-  String get genericErrorSnackbarMessage =>
-      'There has been an error. Please, check your internet connection.';
+  String get upvoteIconButtonTooltip => 'Upvote';
 
   @override
   String get searchBarHintText => 'journey';
@@ -37,5 +24,20 @@ class ComponentLibraryLocalizationsEn extends ComponentLibraryLocalizations {
   String get shareIconButtonTooltip => 'Share';
 
   @override
-  String get upvoteIconButtonTooltip => 'Upvote';
+  String get favoriteIconButtonTooltip => 'Favorite';
+
+  @override
+  String get exceptionIndicatorGenericTitle => 'Something went wrong';
+
+  @override
+  String get exceptionIndicatorTryAgainButton => 'Try Again';
+
+  @override
+  String get exceptionIndicatorGenericMessage => 'There has been an error.\nPlease, check your internet connection and try again later.';
+
+  @override
+  String get genericErrorSnackbarMessage => 'There has been an error. Please, check your internet connection.';
+
+  @override
+  String get authenticationRequiredErrorSnackbarMessage => 'You need to sign in before performing this action.';
 }
