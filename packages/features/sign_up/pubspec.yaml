@@ -8,13 +8,21 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  domain_models:
+    path: ../../domain_models
   flutter:
     sdk: flutter
+  flutter_bloc: ^9.0.0
+  form_fields:
+    path: ../../form_fields
+  user_repository:
+    path: ../../user_repository
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  mocktail: ^1.0.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
