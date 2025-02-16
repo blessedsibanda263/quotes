@@ -1,8 +1,3 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
-library;
-
-export 'src/fav_qs_api_base.dart';
-
-// TODO: Export any libraries intended for clients of this package.
+export 'src/fav_qs_api.dart';
+export 'src/models/exceptions.dart';
+export 'src/models/models.dart';
