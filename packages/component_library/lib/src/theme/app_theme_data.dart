@@ -86,7 +86,7 @@ class DarkAppThemeData extends AppThemeData {
   @override
   ThemeData get materialThemeData => ThemeData(
     brightness: Brightness.dark,
-    colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+    // colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
     primarySwatch: Colors.white.toMaterialColor(),
     dividerTheme: _dividerThemeData,
   );

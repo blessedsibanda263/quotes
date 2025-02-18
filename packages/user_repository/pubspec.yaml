@@ -9,7 +9,7 @@ environment:
 # Add regular dependencies here.
 dependencies:
   rxdart: ^0.28.0
-  flutter_secure_storage: ^4.2.1
+  flutter_secure_storage: ^9.2.4
   fav_qs_api:
     path: ../fav_qs_api
   key_value_storage:

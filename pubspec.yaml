@@ -17,8 +17,8 @@ dependencies:
     sdk: flutter
   key_value_storage:
     path: packages/key_value_storage
-  monitoring:
-    path: packages/monitoring
+  # monitoring:
+  #   path: packages/monitoring
   quote_repository:
     path: packages/quote_repository
   routemaster: ^1.0.1

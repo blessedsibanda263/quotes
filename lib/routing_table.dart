@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:monitoring/monitoring.dart';
 import 'package:quote_repository/quote_repository.dart';
 import 'package:quotes/tab_container_screen.dart';
 import 'package:routemaster/routemaster.dart';
@@ -12,15 +11,13 @@ class _PathConstants {
   static String get tabContainerPath => '/';
   static String get quoteListPath => '${tabContainerPath}quotes';
   static String get profileMenuPath => '${tabContainerPath}user';
-  static String get signUpPath => '${tabContainerPath}sign-up';
+  static String get signUpPath => '${tabContainerPath}sign_up';
 }
 
 Map<String, PageBuilder> buildRoutingTable({
   required RoutemasterDelegate routerDelegate,
   required UserRepository userRepository,
   required QuoteRepository quoteRepository,
-  required RemoteValueService remoteValueService,
-  required DynamicLinkService dynamicLinkService,
 }) {
   return {
     _PathConstants.tabContainerPath:

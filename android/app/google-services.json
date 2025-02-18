@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "6372230216",
+    "project_id": "quotes-fdac4",
+    "storage_bucket": "quotes-fdac4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6372230216:android:de410d3c202f94294c447d",
+        "android_client_info": {
+          "package_name": "com.blessedsibanda263.quotes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYiWtBv8BCzTlZHHAvevAcnXZqmtpsWuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
