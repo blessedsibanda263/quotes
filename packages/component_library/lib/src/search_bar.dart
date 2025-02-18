@@ -1,11 +1,11 @@
 import 'package:component_library/src/l10n/component_library_localizations.dart';
 import 'package:flutter/material.dart';
 
-class SearchBar extends StatelessWidget {
+class SearchBarL extends StatelessWidget {
   final TextEditingController? controller;
   final ValueChanged<String>? onChanged;
 
-  const SearchBar({super.key, this.controller, this.onChanged});
+  const SearchBarL({super.key, this.controller, this.onChanged});
 
   @override
   Widget build(BuildContext context) {
