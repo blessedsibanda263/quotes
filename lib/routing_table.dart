@@ -1,5 +1,6 @@
 import 'package:domain_models/domain_models.dart';
 import 'package:flutter/material.dart';
+import 'package:profile_menu/profile_menu.dart';
 import 'package:quote_details/quote_details.dart';
 import 'package:quote_list/quote_list.dart';
 import 'package:quote_repository/quote_repository.dart';
@@ -96,5 +97,21 @@ Map<String, PageBuilder> buildRoutingTable({
             },
           ),
         ),
+    _PathConstants.profileMenuPath: (_) {
+      return MaterialPage(
+        name: 'profile-menu',
+        child: ProfileMenuScreen(
+          userRepository: userRepository,
+          quoteRepository: quoteRepository,
+          onSignInTap: () {
+            routerDelegate.push(_PathConstants.signInPath);
+          },
+          onSignUpTap: () {
+            routerDelegate.push(_PathConstants.signUpPath);
+          },
+          onUpdateProfileTap: () {},
+        ),
+      );
+    },
   };
 }

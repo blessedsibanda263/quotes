@@ -19,6 +19,8 @@ dependencies:
     path: packages/key_value_storage
   # monitoring:
   #   path: packages/monitoring
+  profile_menu:
+    path: packages/features/profile_menu
   quote_details:
     path: packages/features/quote_details
   quote_list:
