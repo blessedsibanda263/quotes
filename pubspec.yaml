@@ -26,6 +26,8 @@ dependencies:
   quote_repository:
     path: packages/quote_repository
   routemaster: ^1.0.1
+  sign_in:
+    path: packages/features/sign_in
   sign_up:
     path: packages/features/sign_up
   user_repository:

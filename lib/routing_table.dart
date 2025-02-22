@@ -5,6 +5,7 @@ import 'package:quote_list/quote_list.dart';
 import 'package:quote_repository/quote_repository.dart';
 import 'package:quotes/tab_container_screen.dart';
 import 'package:routemaster/routemaster.dart';
+import 'package:sign_in/sign_in.dart';
 import 'package:sign_up/sign_up.dart';
 import 'package:user_repository/user_repository.dart';
 
@@ -15,6 +16,7 @@ class _PathConstants {
   static String get quoteListPath => '${tabContainerPath}quotes';
   static String get profileMenuPath => '${tabContainerPath}user';
   static String get signUpPath => '${tabContainerPath}sign_up';
+  static String get signInPath => '${tabContainerPath}sign-in';
 
   static String get idPathParameter => 'id';
 
@@ -70,7 +72,28 @@ Map<String, PageBuilder> buildRoutingTable({
         (_) => MaterialPage(
           child: SignUpScreen(
             userRepository: userRepository,
-            onSignUpSuccess: () {},
+            onSignUpSuccess: () {
+              routerDelegate.pop();
+            },
+          ),
+        ),
+    _PathConstants.signInPath:
+        (_) => MaterialPage(
+          name: 'sign-in',
+          fullscreenDialog: true,
+          child: Builder(
+            builder: (context) {
+              return SignInScreen(
+                userRepository: userRepository,
+                onSignInSuccess: () {
+                  routerDelegate.pop();
+                },
+                onSignUpTap: () {
+                  routerDelegate.push(_PathConstants.signUpPath);
+                },
+                onForgotMyPasswordTap: () {},
+              );
+            },
           ),
         ),
   };
