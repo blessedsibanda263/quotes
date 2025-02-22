@@ -1,15 +1,22 @@
 name: sign_in
-description: "A new Flutter package project."
 version: 0.0.1
-homepage:
 
 environment:
   sdk: ^3.7.0
   flutter: ">=1.17.0"
 
 dependencies:
+  component_library:
+    path: ../../component_library
+  domain_models:
+    path: ../../domain_models
   flutter:
     sdk: flutter
+  flutter_bloc: ^9.0.0
+  form_fields:
+    path: ../../form_fields
+  user_repository:
+    path: ../../user_repository
 
 dev_dependencies:
   flutter_test:
