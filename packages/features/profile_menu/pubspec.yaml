@@ -8,8 +8,18 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  component_library:
+    path: ../../component_library
+  domain_models:
+    path: ../../domain_models
   flutter:
     sdk: flutter
+  flutter_bloc: ^9.0.0
+  quote_repository:
+    path: ../../quote_repository
+  rxdart: ^0.28.0
+  user_repository:
+    path: ../../user_repository
 
 dev_dependencies:
   flutter_test:
