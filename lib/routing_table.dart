@@ -1,4 +1,6 @@
+import 'package:domain_models/domain_models.dart';
 import 'package:flutter/material.dart';
+import 'package:quote_details/quote_details.dart';
 import 'package:quote_list/quote_list.dart';
 import 'package:quote_repository/quote_repository.dart';
 import 'package:quotes/tab_container_screen.dart';
@@ -13,6 +15,11 @@ class _PathConstants {
   static String get quoteListPath => '${tabContainerPath}quotes';
   static String get profileMenuPath => '${tabContainerPath}user';
   static String get signUpPath => '${tabContainerPath}sign_up';
+
+  static String get idPathParameter => 'id';
+
+  static String quoteDetailsPath({int? quoteId}) =>
+      '$quoteListPath/${quoteId ?? ':$idPathParameter'}';
 }
 
 Map<String, PageBuilder> buildRoutingTable({
@@ -36,12 +43,29 @@ Map<String, PageBuilder> buildRoutingTable({
             routerDelegate.push(_PathConstants.signUpPath);
           },
           onQuoteSelected: (id) {
-            print("Quote Selected: $id");
-            return Future.value(null);
+            final navigation = routerDelegate.push<Quote?>(
+              _PathConstants.quoteDetailsPath(quoteId: id),
+            );
+            return navigation.result;
           },
         ),
       );
     },
+    _PathConstants.quoteDetailsPath():
+        (info) => MaterialPage(
+          child: QuoteDetailsScreen(
+            quoteId: int.parse(
+              info.pathParameters[_PathConstants.idPathParameter] ?? '',
+            ),
+            onAuthenticationError: () {
+              routerDelegate.push(_PathConstants.signUpPath);
+            },
+            quoteRepository: quoteRepository,
+            shareableLinkGenerator: (quote) {
+              return Future.value('Sharing ${quote.body}');
+            },
+          ),
+        ),
     _PathConstants.signUpPath:
         (_) => MaterialPage(
           child: SignUpScreen(

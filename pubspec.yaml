@@ -19,6 +19,8 @@ dependencies:
     path: packages/key_value_storage
   # monitoring:
   #   path: packages/monitoring
+  quote_details:
+    path: packages/features/quote_details
   quote_list:
     path: packages/features/quote_list
   quote_repository:
