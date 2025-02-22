@@ -2,7 +2,6 @@ import 'package:component_library/component_library.dart';
 import 'package:domain_models/domain_models.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quote_list/src/l10n/quote_list_localizations.dart';
 import 'package:quote_list/src/quote_list_bloc.dart';
 import 'package:quote_list/src/quote_list_event.dart';
 import 'package:quote_list/src/quote_list_state.dart';
@@ -42,9 +41,8 @@ class _FavoritesChip extends StatelessWidget {
           return isFilteringByFavorites;
         },
         builder: (context, isFavoritesOnly) {
-          final l10n = QuoteListLocalizations.of(context);
           return RoundedChoiceChip(
-            label: l10n.favoritesTagLabel,
+            label: "Favorites",
             isSelected: isFavoritesOnly,
             avatar: Icon(
               isFavoritesOnly ? Icons.favorite : Icons.favorite_border_outlined,
@@ -107,22 +105,21 @@ void _releaseFocus(BuildContext context) => FocusScope.of(context).unfocus();
 
 extension on Tag {
   String toLocalizedString(BuildContext context) {
-    final l10n = QuoteListLocalizations.of(context);
     switch (this) {
       case Tag.life:
-        return l10n.lifeTagLabel;
+        return "Life";
       case Tag.happiness:
-        return l10n.happinessTagLabel;
+        return "Happiness";
       case Tag.work:
-        return l10n.workTagLabel;
+        return "Work";
       case Tag.nature:
-        return l10n.natureTagLabel;
+        return "Nature";
       case Tag.science:
-        return l10n.scienceTagLabel;
+        return "Science";
       case Tag.love:
-        return l10n.loveTagLabel;
+        return "Love";
       case Tag.funny:
-        return l10n.funnyTagLabel;
+        return "Funny";
     }
   }
 }

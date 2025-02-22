@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:quote_list/src/filter_horizontal_list.dart';
-import 'package:quote_list/src/l10n/quote_list_localizations.dart';
 import 'package:quote_list/src/quote_list_bloc.dart';
 import 'package:quote_list/src/quote_list_event.dart';
 import 'package:quote_list/src/quote_list_state.dart';
@@ -85,7 +84,6 @@ class _QuoteListViewState extends State<QuoteListView> {
   @override
   Widget build(BuildContext context) {
     final theme = AppTheme.of(context);
-    final l10n = QuoteListLocalizations.of(context);
     return BlocListener<QuoteListBloc, QuoteListState>(
       listener: (context, state) {
         final searchBarText = _searchBarController.text;
@@ -96,7 +94,11 @@ class _QuoteListViewState extends State<QuoteListView> {
         }
         if (state.refreshError != null) {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text(l10n.quoteListRefreshErrorMessage)),
+            SnackBar(
+              content: Text(
+                "We couldn't refresh your items.\nPlease, check your internet connection and try again later.",
+              ),
+            ),
           );
         } else if (state.favoriteToggleError != null) {
           final snackBar =
